@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var cors = require("cors")
 var bodyParser = require("body-parser")
+const port = process.env.PORT || 8089
 
 var urlencodedParser = bodyParser.urlencoded({ extended: true })
 app.use(cors());
@@ -36,6 +37,6 @@ app.get('*',(req,res)=>{
 
 //---------------------------port------------------------
 
-app.listen(8089);
+app.listen(port);
 
 
